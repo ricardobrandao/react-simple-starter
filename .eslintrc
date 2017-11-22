@@ -1,0 +1,52 @@
+{
+	"parser": "babel-eslint",
+	"extends": "eslint-config-synacor",
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"globals": {
+		"__PWA_ENV__": false,
+		"__LOCAL__": false
+	},
+	"settings": {
+		"import/resolver": {
+			"webpack": {
+				"config": "./webpack.prod.client.js"
+			}
+		}
+	},
+	"rules": {
+		"jsx-a11y/no-noninteractive-element-interactions": [
+			"off"
+		],
+		"jsx-a11y/no-static-element-interactions": [
+			"off"
+		],
+		"no-multiple-empty-lines": [
+			"error",
+			{
+				"max": 1,
+				"maxEOF": 0,
+				"maxBOF": 0
+			}
+		],
+		"react/forbid-prop-types": [
+			"error",
+			{
+				"forbid": [
+					"any"
+				]
+			}
+		],
+		"react/jsx-filename-extension": [
+			"error",
+			{
+				"extensions": [
+					".js"
+				]
+			}
+		]
+	}
+}
