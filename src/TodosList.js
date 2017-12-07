@@ -8,6 +8,8 @@ export default inject('store')(observer(class TodosList extends Component {
 
 		setTimeout(() => this.props.store.addTodo({ title: 'Learn React' }), 1000);
 		setTimeout(() => this.props.store.addTodo({ title: 'Learn MobX' }), 2000);
+		// This now causes an error because of strict mode
+		//setTimeout(() => this.props.store.todos.push({ title: 'Error' }), 3000);
 	}
 
 	render() {
